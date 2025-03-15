@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Traverse</title>
+</head>
+<body>
+    <input type="text" id="element" placeholder="7">
+    <button onclick=getElement()>Get Element</button>
+
+    <script>
+        let data = [9,10,7,8,3,89,29,31,67,56,33]
+        // for (let i = 0; i < data.length; i++) {
+        //     document.write(`${data[i]} <br>`)
+            
+        // }
+        // let x = 7;
+        // document.write(data[x])
+        function getElement(){
+            let element = document.getElementById("element").value
+            if(element<data.length && element > -1){
+                alert(data[element])
+            }
+            else{
+                alert("Invalid Input")
+            }
+        }
+    </script>
+</body>
+</html>
