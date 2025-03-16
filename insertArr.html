@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Element into an Array</title>
+</head>
+<body>
+    <input type="text" placeholder="enter the new element" id="element">
+    <input type="text" placeholder="enter the index" id="index">
+    <button onclick=addElement()>Add Element</button>
+
+    <script>
+        let data = [22,33,53,6,2,5,3,8,9]
+        console.warn(data)
+        function addElement(){
+            let newElement = Number(document.getElementById("element").value)
+            let position = document.getElementById("index").value
+            for(let i = data.length - 1; i>= position; i--){
+                data[i+1] = data[i]
+                if(i == position){
+                    data[i] = newElement
+                }
+            }
+            console.warn(data)
+        }
+    </script>
+</body>
+</html>
