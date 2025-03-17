@@ -10,17 +10,17 @@
     <button onclick=getIndex()>Search</button>
     
     <script>
-        let data = [54,5,10,9,87,98,65,42,43,67]
+        let data = [54,5,10,9,87,98,65,42,43,67,87]
         function getIndex(){
+            let count = 0
             let element = Number(document.getElementById("element").value)
             for(let i = 0;i<=data.length;i++){
-            if(data[i] === element){
-                console.warn(`The element was found at index ${i}`)
-            }
-            else{
-                console.warn("The element was not found in the array")
-            }
+                if(data[i] === element){
+                    count = count + 1
+                    console.warn(`The element was found at ${i}`)
+                }
         }
+        console.warn(`The element was found ${count} times.`)
     }
     </script>
 </body>
